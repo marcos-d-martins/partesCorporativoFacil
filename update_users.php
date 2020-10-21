@@ -2,7 +2,7 @@
     ...
     foreach($readAuth->result() AS $authors):
       echo "<option value=\"{$auth['id_auth']}\" ";
-      if($authors['id_auth'] == $post['id_autor']):
+      if($authors['id_auth'] == $post['id_auth']):
           echo " selected=\"selected\"  ";
           if($post['id_auth'] > 2):
               $readAuth->query("SELECT DISTINCT u.id AS id_auth,
