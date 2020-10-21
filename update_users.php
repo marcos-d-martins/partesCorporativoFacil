@@ -1,5 +1,11 @@
 <?php
     ...
+        if($_SESSION['authenticate']['lvl'] != 3):
+            echo "<span class='title'>Author
+                <select class='title' disabled>
+                <option value=\"{$_SESSION['authenticate']['id']}\" disabled selected>{$_SESSION['authenticate']['user']}</option>
+            </select></span>";
+        else:
     foreach($readAuth->result() AS $authors):
       echo "<option value=\"{$auth['id_auth']}\" ";
       if($authors['id_auth'] == $post['id_auth']):
